@@ -1,0 +1,94 @@
+.margin{width:1200px;margin:0 auto;}
+
+#top-t{height:35px;background:#f7f7f7;}
+#top-t .margin a.left{display:block;width:68px;height:14px;background:url(../../public/img/syicon.png) no-repeat left center;font:12px/14px "";float:left;padding:10px;text-indent:10px;color:#666;}
+#top-t .margin .right{float:right;padding:4px;color:#666;height:16px;}
+#top-t .margin .right li{float:left;font:12px/27px "";color:#666;padding-left:10px;padding-right:10px;position:relative;}
+#top-t .margin .right li i{font:12px/27px "";color:#666;}
+#top-t .margin .right li:after{content:"";display:block;width:1px;height:12px;background:#c5c4c4;position:absolute;top:7px;left:0;}
+#top-t .margin .right li.wel:after{content:"";display:none;}
+#top-t .margin .right li.land:after{content:"";display:none;}
+#top-t .margin .right .land{padding:0 12px 0 18px;}
+#top-t .margin .right .land a{color:#0066cc;}
+#top-t .margin .right li a.xj{padding-right:9px;background:url(../../public/img/xj.png) no-repeat right 7px;}
+#top-t .margin .right li span{position:absolute;display:block;top:0;left:0;background:url(../../public/img/zhenghe.png) no-repeat;}
+#top-t .margin .right li.telUl{padding-left:26px;}
+#top-t .margin .right li.telUl span{width:10px;height:16px;left:10px;top:6px;}
+#top-t .margin .right li.shopUl{padding-left:32px;}
+#top-t .margin .right li.shopUl span{width:15px;height:14px;left:11px;top:7px;background-position:-15px 0;}
+#top-t .margin .right li.phone{padding-left:32px;}
+#top-t .margin .right li.phone span{width:16px;height:16px;left:12px;top:6px;background-position:-32px 0;}
+#top-t .margin .right li.phone i{font:600 12px/27px "";color:#c4100d;}
+
+#header{background:#fff;border-bottom:solid 4px #a71b1c;}
+#header .logo{float:left;display:block;width:75px;height:75px;padding:12px 0;}
+
+#main{}
+#main .margin{position:relative;height:495px;background:url(../img/backg.png) no-repeat;}
+#main .login{width:302px;height:440px;border-radius:5px;border:1px solid #b9c3ad;position:absolute;right:124px;top:11px;padding:15px 16px;background:#fff;}
+#main .login .put{position: relative;}
+#main .login .put h4{font:700 14px/30px "";color:#333;}
+#main .login .put input{display:block;width:300px;height:38px;border:solid 1px #cacaca;margin-top:22px;text-indent:28px;font:14px/38px "";color:#999;}
+#main .login .put span{display:none;color:red;font-size:12px;position:absolute;top:94px;}
+#main .login input.user{background:url(../img/user.png) no-repeat 6px 10px;}
+#main .login input.pass{background:url(../img/pass.png) no-repeat 5px 10px;}
+#main .login .forget{padding:6px 0 76px 0;}
+#main .login .forget p{height:44px;}
+#main .login .forget p input{float:left;height:44px;}
+#main .login .forget p span{float:left;color:#656567;font:12px/44px "";}
+#main .login .forget p a{float:right;color:#0033cc;font:12px/44px "";}
+#main .login .forget .sub{display:block;width:302px;height:38px;background:#d10208;border:solid 1px #a71427;border-radius:5px;color:#fff;
+font:700 16px "";cursor:pointer;}
+#main .login .forget .logIn{position: absolute;width:150px;color:red;font:12px "";left:20px;top:260px;}
+#main .login .forget h4{font:12px/3 "";height:36px;}
+#main .login .forget h4 a{float:right;color:#1675be;}
+#main .login .forget .others{}
+#main .login .others p{font:12px/28px "";color:#999;}
+#main .login .others ul{height:54px;}
+#main .login .others ul li{float:left;width:63px;text-align:center;margin-right:12px;}
+#main .login .others ul li i{display:block;width:37px;height:32px;background:url(../img/loginway.png) no-repeat;margin-left:13px;}
+#main .login .others ul li .xinlang{background-position:0 -32px;}
+#main .login .others ul li .qq{background-position:-37px -32px;}
+#main .login .others ul li .tom{background-position:-74px -32px;}
+#main .login .others ul li .wechat{background-position:-111px -32px;}
+#main .login .others ul li span{font:12px/22px "";color:#999;}
+
+#footer{background:#fff;padding-bottom:34px;}
+#footer .advantage{height:26px;padding:32px 0;border-top:solid 1px #ddd;border-bottom:solid 1px #ddd;margin-top:20px;}
+#footer .advantage li{width:300px;height:26px;float:left;position:relative;}
+#footer .advantage li:after{content:"";display:block;width:1px;height:26px;background:#dedede;position:absolute;right:0;top:0;}
+#footer .advantage .li4:after{content:"";display:none;}
+#footer .advantage li h3{font:700 18px/26px "";color:#555;}
+#footer .advantage li span{position:absolute;background:url(../../public/img/zhenghe2.png) no-repeat;}
+#footer .advantage .li1 h3{float:left;}
+#footer .advantage .li1 h3.first{margin-left:114px;}
+#footer .advantage .li1 h3.second{margin-left:53px;}
+#footer .advantage .li1 .youz{width:70px;height:20px;top:4px;background-position:0 -8px;left:41px;}
+#footer .advantage .li1 .tom{width:39px;height:18px;background-position:0 -40px;left:137px;top:5px;}
+#footer .advantage .li2 h3{margin-left:91px;}
+#footer .advantage .li2 span{width:24px;height:24px;background-position:-85px -8px;left:60px;}
+#footer .advantage .li3 h3{margin-left:90px;}
+#footer .advantage .li3 span{width:24px;height:18px;background-position:-120px -10px;left:55px;top:4px;}
+#footer .advantage .li4 h3{margin-left:95px;}
+#footer .advantage .li4 .wx{width:24px;height:20px;background-position:-219px -220px;left:60px;top:3px;}
+#footer .advantage .li4 .ma{width:68px;height:68px;background-position:-110px -273px;left:180px;top:-21px;}
+#footer .advantage .li4 .sao{width:36px;height:17px;background-position:-148px -211px;left:140px;top:-18px;}
+#footer .guide{padding:15px 0 20px 0;height:204px;border-bottom:solid 1px #ddd;}
+#footer .guide li{float:left;width:120px;margin-right:96px;}
+#footer .guide li.last{margin:0;}
+#footer .guide li dl dt{font:700 12px/22px "";color:#666;border-bottom:dotted 1px #ccc;}
+#footer .guide li dl dd{font:12px/22px "";color:#666;}
+#footer .link{padding-top:12px;}
+#footer .link p{font:12px/26px "";color:#999;}
+#footer .link ul{height:24px;padding-top:11px;}
+#footer .link ul li{float:left;}
+#footer .link ul li a{display:block;width:98px;height:32px;border:solid 1px #dcdcdc;margin-right:10px;background:url(../../public/img/zhenghe2.png) no-repeat;}
+#footer .link ul li .a1{background-position:-310px -229px;}
+#footer .link ul li .a2{background-position:-298px -169px;}
+#footer .link ul li .a3{background-position:-21px -213px;}
+#footer .link ul li .a4{background-position:-166px -12px;}
+#footer .link ul li .a5{background-position:-148px -145px;}
+#footer .link ul li .a6{background-position:-11px -137px;}
+#footer .link ul li .a7{background-position:-249px -100px;}
+#footer .link ul li .a8{background-position:-121px -68px;}
+#footer .link ul li .a9{background-position:-11px -84px;}

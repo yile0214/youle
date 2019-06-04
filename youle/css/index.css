@@ -2,17 +2,18 @@ body{background:#f3f4f6;}
 .margin{width:1200px;margin:0 auto;}
 
 #top-t{height:35px;background:#f7f7f7;}
-#top-t .margin a.left{display:block;width:68px;height:14px;background:url(../img/syicon.png) no-repeat left center;font:12px/14px "";float:left;padding:10px;text-indent:10px;color:#666;}
+#top-t .margin a.left{display:block;width:68px;height:14px;background:url(../public/img/syicon.png) no-repeat left center;font:12px/14px "";float:left;padding:10px;text-indent:10px;color:#666;}
 #top-t .margin .right{float:right;padding:4px;color:#666;height:16px;}
 #top-t .margin .right li{float:left;font:12px/27px "";color:#666;padding-left:10px;padding-right:10px;position:relative;}
 #top-t .margin .right li i{font:12px/27px "";color:#666;}
 #top-t .margin .right li:after{content:"";display:block;width:1px;height:12px;background:#c5c4c4;position:absolute;top:7px;left:0;}
 #top-t .margin .right li.wel:after{content:"";display:none;}
+#top-t .margin .right li.wel a{color:#0066cc;}
 #top-t .margin .right li.land:after{content:"";display:none;}
 #top-t .margin .right .land{padding:0 12px 0 18px;}
 #top-t .margin .right .land a{color:#0066cc;}
-#top-t .margin .right li a.xj{padding-right:9px;background:url(../img/xj.png) no-repeat right 7px;}
-#top-t .margin .right li span{position:absolute;display:block;top:0;left:0;background:url(../img/zhenghe.png) no-repeat;}
+#top-t .margin .right li a.xj{padding-right:9px;background:url(../public/img/xj.png) no-repeat right 7px;}
+#top-t .margin .right li span{position:absolute;display:block;top:0;left:0;background:url(../public/img/zhenghe.png) no-repeat;}
 #top-t .margin .right li.telUl{padding-left:26px;}
 #top-t .margin .right li.telUl span{width:10px;height:16px;left:10px;top:6px;}
 #top-t .margin .right li.shopUl{padding-left:32px;}
@@ -38,7 +39,7 @@ body{background:#f3f4f6;}
 #header .shopCar li span{position:absolute;display:block;width:16px;height:15px;background:url(../img/zhenghe.png) no-repeat;background-position:-52px 0;}
 #header .shopCar li i{position:absolute;display:block;width:1px;height:12px;right:0;top:2px;background:#c5c4c4;}
 #header .shopCar li .shop{margin-left:21px;}
-#header .shopCar .num{background:url(../img/xj.png) no-repeat right center;}
+#header .shopCar .num{background:url(../public/img/xj.png) no-repeat right center;}
 #header .shopCar .num a{color:#990000;margin-left:27px;}
 
 #nav{background:#a71b1b;}
@@ -47,15 +48,16 @@ body{background:#f3f4f6;}
 #nav ul li:hover{background:#6c0709;}
 #nav ul .classification{width:190px;height:40px;position:relative;background:#b82424;}
 #nav ul .classification:hover{background:#c52e15;}
-#nav ul .classification span{position:absolute;width:16px;height:14px;left:16px;top:12px;background:url(../img/zhenghe.png) no-repeat;background-position:-72px 0;}
+#nav ul .classification span{position:absolute;width:16px;height:14px;left:16px;top:12px;background:url(../public/img/zhenghe.png) no-repeat;background-position:-72px 0;}
 #nav ul .classification i{position:absolute;width:12px;height:12px;left:162px;top:13px;background:url(../img/yj.png) no-repeat;}
 #nav ul .classification a{margin-left:32px;}
 #nav ul li a{color:#fff;display:block;width:99px;font:14px/40px "";text-align:center;}
 
 #banner{background:#ffce58;positin:relative;}
 #banner .menu{position:absolute;width:190px;height:470px;background:#f8eff0;z-index:1;}
-#banner .menu li{height:36px;}
-#banner .menu li:hover{background:#fff;}
+#banner .menu li.menu-child{height:36px;}
+#banner .menu li.menu-child:hover{background:#fff;}
+#banner .menu li.menu-child:hover ul{display:block}
 #banner .menu li i{display:block;width:16px;height:16px;float:left;background:url(../img/list.png) no-repeat;margin:12px 10px 0 15px;}
 #banner .menu li span{float:left;font:14px/36px "";color:#333;}
 #banner .menu li .i2{background-position:0 -16px;}
@@ -70,8 +72,13 @@ body{background:#f3f4f6;}
 #banner .menu li .i11{background-position:0 -160px;}
 #banner .menu li .i12{background-position:0 -176px;}
 #banner .menu li .i13{background-position:0 -192px;}
+#banner .menu li ul{position:absolute;width:734px;left:190px;height:470px;background:rgba(255,255,255,0.9);display:none;top:0;}
+#banner .menu li ul li{padding-top:13px;}
+#banner .menu li ul li h4{float:left;font:700 12px/22px "";padding:0 54px 0 24px;color:#333;}
+#banner .menu li ul li p{float:left;font:12px/22px "";padding-bottom:5px;width:575px;border-bottom:solid 1px #ebebeb;}
+#banner .menu li ul li p a{margin-right:20px;}
 #banner .imgBox{position:relative;height:470px;width:1200px;}
-#banner a{display:block;height:470px;position:absolute}
+#banner .imgBox a{display:block;height:470px;position:absolute}
 #banner img{height:470px;width:1200px;}
 
 #main{padding-top:20px;}
@@ -139,7 +146,7 @@ body{background:#f3f4f6;}
 #footer .advantage li:after{content:"";display:block;width:1px;height:26px;background:#dedede;position:absolute;right:0;top:0;}
 #footer .advantage .li4:after{content:"";display:none;}
 #footer .advantage li h3{font:700 18px/26px "";color:#555;}
-#footer .advantage li span{position:absolute;background:url(../img/zhenghe2.png) no-repeat;}
+#footer .advantage li span{position:absolute;background:url(../public/img/zhenghe2.png) no-repeat;}
 #footer .advantage .li1 h3{float:left;}
 #footer .advantage .li1 h3.first{margin-left:114px;}
 #footer .advantage .li1 h3.second{margin-left:53px;}
@@ -162,7 +169,7 @@ body{background:#f3f4f6;}
 #footer .link p{font:12px/26px "";color:#999;}
 #footer .link ul{height:24px;padding-top:11px;}
 #footer .link ul li{float:left;}
-#footer .link ul li a{display:block;width:98px;height:32px;border:solid 1px #dcdcdc;margin-right:10px;background:url(../img/zhenghe2.png) no-repeat;}
+#footer .link ul li a{display:block;width:98px;height:32px;border:solid 1px #dcdcdc;margin-right:10px;background:url(../public/img/zhenghe2.png) no-repeat;}
 #footer .link ul li .a1{background-position:-310px -229px;}
 #footer .link ul li .a2{background-position:-298px -169px;}
 #footer .link ul li .a3{background-position:-21px -213px;}
