@@ -35,10 +35,11 @@ padding:30px 15px 87px;position:relative;}
 #main .register ul.put .tel i{display:block;color:red;position:absolute;left:70px;top:45px;}
 #main .register ul.put .password i{display:block;color:red;position:absolute;left:70px;top:45px;}
 #main .register ul.put .re-password i{display:block;color:red;position:absolute;left:70px;top:45px;}
-#main .register ul.put .Verification s{display:block;color:#fff;position:absolute;left:310px;top:9px;width:50px;font:16px/24px "";background:#99abe2;text-align:center;}
+#main .register ul.put .Verification s{display:block;color:#fff;position:absolute;left:310px;top:9px;width:50px;font:16px/24px "";background:#99abe2;text-align:center;cursor:pointer;}
 #main .register ul.put .Verification i{display:block;color:red;position:absolute;left:70px;top:45px;}
 #main .register ul.put li input{float:left;height:38px;width:298px;border:solid 1px #cacaca;font:14px/38px "";color:#757575;text-indent:10px;}
-#main .register .accept{padding-left:290px;font:12px/58px "";height:58px;}
+#main .register .accept{padding-left:290px;font:12px/58px "";height:58px;position:relative;}
+#main .register .accept i{display:block;color:red;position:absolute;left:283px;top:18px;}
 #main .register .accept span{color:#aeaeae;float:left;}
 #main .register .accept input{margin-top:24px;margin-right:3px;float:left}
 #main .register .accept a{color:#0033cc;float:left;}

@@ -12,12 +12,13 @@ class AllLogin{
             for(var i=0;i<that.msg.length;i++){
                 if(that.msg[i].user == that.name){
                     that.msg[i].onoff = 0;
+                    
                     that.land.style.display="block";
                     that.loginSuc.innerHTML= "";
                     that.excit.innerHTML="";
+                    localStorage.setItem("msg",JSON.stringify(that.msg));
+                    return
                 }
-                localStorage.setItem("msg",JSON.stringify(that.msg));
-                return
             }
            
         }
