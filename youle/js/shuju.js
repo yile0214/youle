@@ -9,7 +9,6 @@ class Data{
             this.init()
         }
         init(){
-            // console.log(1)
             var that = this;
             $.ajax({
                 url:"./public/json/goods.json",
@@ -24,8 +23,8 @@ class Data{
             var str = ""
             for(var i=0;i<this.res.length;i++){
 				if(i<8){
-					str += `<li>
-								<a href="#">
+					str += `<li goodId="${this.res[i].goodId}">
+								<a href="xiangqing/details.html?id=${this.res[i].goodId}">
 									<img src="${this.res[i].src}" alt="">
 									<p>${this.res[i].title}</p>
 									<span>${this.res[i].price}</span>
@@ -70,11 +69,10 @@ class Card{
 	}
 	display(){
 		var str = ""
-		console.log(this.index*this.num,this.index*this.num+this.num)
 		for(var i=this.index*this.num;i<this.index*this.num+this.num;i++){
 			if(i<this.res.length){
 				str += `<li>
-						<a href="#">
+						<a href="xiangqing/details.html?id=${this.res[i].goodId}">
 							<img src="${this.res[i].src}" alt="">
 							<p>${this.res[i].title}</p>
 							<span>${this.res[i].price}</span>
@@ -90,10 +88,65 @@ class Card{
 		$("#main").find(".title").children("h4").click(function(){
 			$(this).addClass("active").siblings().removeClass("active");
 			that.index=$(this).index();
-			console.log(that.index)
 			that.display()
 		})
 		
 	}
 }
 	new Card
+	
+	
+	// 搜索框接口
+	class Search{
+		constructor(){
+			this.txt = document.querySelector("#header .search .txt")
+			this.ul = document.querySelector("#header .search ul.cb");
+			this.init()
+		}
+		init(){
+			
+			var that = this
+			this.txt.oninput = function(){
+				that.txt.value = this.value;
+				that.load()
+			}
+			
+		}
+		load(){
+			var that=this;
+			$.ajax({
+				url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",
+				data:{
+					wd:this.txt.value
+				},
+				jsonp:"cb",
+				dataType:"jsonp",
+				success:function(res){
+					that.res=res.s
+					that.display()
+				}
+			})
+		}
+		display(){
+			var str = "";
+			for(var i=0;i<this.res.length;i++){
+				str += `<li>${this.res[i]}</li>`
+			}
+			this.ul.style.border="solid 1px #eee";
+			this.ul.innerHTML=str;
+			this.addEvent()
+		}
+		addEvent(){
+			var that=this
+			this.ul.onclick=function(eve){
+				var e = eve || window.event;
+				var target = e.target || e.srcElement
+				if(target.nodeName=="LI"){
+					that.txt.value=target.innerHTML;
+					that.ul.style.border="none";
+					that.ul.innerHTML="";
+				}
+			}
+		}
+	}
+	new Search

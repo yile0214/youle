@@ -1,3 +1,4 @@
+
 $("#aside-l").find("li").click(function(){
     if($(this).index()==5){
         $("html").animate({
@@ -15,3 +16,5 @@ $("#banner").find(".menu").children(".menu-child").hover(function(){
 },function(){
     $("#banner").find(".menu").children(".menu-child").css("background","").children("ul").css("display","none")
 })
+
+	

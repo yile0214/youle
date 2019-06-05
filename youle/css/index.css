@@ -27,16 +27,19 @@ body{background:#f3f4f6;}
 
 #header{background:#fff;}
 #header .logo{float:left;display:block;width:75px;height:75px;padding:12px 0;}
-#header .search{float:left;margin:22px 0 0 216px;width:533px;height:64px;}
-#header .search .txt{width:457px;height:30px;border:solid 3px #c7181d;float:left;font:14px "";color:#999;text-indent:6px;}
+#header .search{float:left;margin:22px 0 0 216px;width:533px;height:64px;position:relative;}
+#header .search .txt{width:457px;height:30px;border:solid 3px #c7181d;float:left;font:14px "";color:#999;text-indent:6px;outline:none;}
 #header .search .btn{width:70px;height:36px;border:none;float:right;background:#c7181d url(../img/search.png) no-repeat 21px 5px;}
+#header .search ul.cb{width:460px;position:absolute;top:36px;background:#fff;z-index:2;}
+#header .search ul.cb li{font:14px/24px "";color:#999;text-indent:6px;}
+#header .search ul.cb li:hover{background:#eee;color:#c7181d;}
 #header .search .suggest{float:left;}
 #header .search .suggest a{font:12px/28px "";}
 #header .search .suggest a:hover{text-decoration:underline;}
 #header .search .suggest .te{color:#c51010;}
 #header .shopCar{float:right;width:139px;height:14px;border:solid 1px #bdbdbd;margin-top:22px;padding:9px 10px 10px;}
 #header .shopCar li{float:left;width:69px;font:12px/15px "";position:relative;}
-#header .shopCar li span{position:absolute;display:block;width:16px;height:15px;background:url(../img/zhenghe.png) no-repeat;background-position:-52px 0;}
+#header .shopCar li span{position:absolute;display:block;width:16px;height:15px;background:url(../public/img/zhenghe.png) no-repeat;background-position:-52px 0;}
 #header .shopCar li i{position:absolute;display:block;width:1px;height:12px;right:0;top:2px;background:#c5c4c4;}
 #header .shopCar li .shop{margin-left:21px;}
 #header .shopCar .num{background:url(../public/img/xj.png) no-repeat right center;}
@@ -85,7 +88,7 @@ body{background:#f3f4f6;}
 #main{padding-top:20px;}
 #main .margin{background:#fff;}
 #main .title{height:52px;border-bottom:solid 1px #eee;}
-#main .title h4{float:left;font:16px/51px "";width:210px;text-indent:88px;background:#fff;}
+#main .title h4{float:left;font:16px/51px "";width:210px;text-align:center;background:#fff;}
 #main .title h4.active{background:#fbebe9;border-bottom:solid 1px #c5181c;}
 #main .commodity{height:279px;padding-bottom:6px;}
 #main .commodity li{float:left;;border-right:solid 1px #f1f0ec;padding:10px 19px;text-align:center;}
