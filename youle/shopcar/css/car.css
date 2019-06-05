@@ -32,10 +32,18 @@
 #main table tbody tr td:nth-child(1) p{float:left;width:183px;font:12px/22px "";color:#666;margin-left:10px;}
 #main table tbody tr td:nth-child(3) input{width:100px;}
 #main table tbody tr td:nth-child(5) input{border:0;width:50px;height:30px;background:mistyrose;color:red;cursor:pointer;}
-
-
-
-
+#suan{margin-top:20px;background:#f3f3f3;}
+#suan .settlement{height:40px;padding:10px 0;}
+#suan .settlement ul{height:40px;width:709px;float:left;}
+#suan .settlement ul li{float:left;color:#666;font:12px/20px "";width:100px;}
+#suan .settlement ul li span{display:block;}
+#suan .settlement ul li.yunfei{width:64px;}
+#suan .settlement ul li.zong{width:343px;}
+#suan .settlement ul li.zong h4{font:28px/40px "";color:#c42e15;}
+#suan .settlement .goon{float:left;}
+#suan .settlement .goon input{display:block;width:98px;height:38px;border:solid 1px #bbb;font:12px "";color:#666;background:#fff;border-radius:3px;cursor:pointer;}
+#suan .settlement .jiezhang{float:left;}
+#suan .settlement .jiezhang input{display:block;width:130px;height:38px;border:solid 1px #a61325;font:700 18px "";color:#fff;background:#d10208;border-radius:3px;margin-left:10px;cursor:pointer;}
 
 
 

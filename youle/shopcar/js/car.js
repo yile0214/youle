@@ -2,6 +2,9 @@ class Car{
 	constructor(){
 		this.tbody=document.querySelector("#main table tbody");
 		this.thead=document.querySelector("#main table thead .election");
+		this.zongjia = document.querySelector("#suan .settlement .zong h4");
+		this.heji = document.querySelector("#suan .settlement .heji span");
+		this.shuliang = document.querySelector("#suan .settlement .shu span");
 		this.addEvent();
 		
 		this.init();
@@ -32,9 +35,9 @@ class Car{
 							</td>
 							<td>${this.res[i].price}</td>
 							<td>
-								<input type="number" min="1" value="${this.goods[j].num}"/>
+								<input type="number" min="1" value="${this.goods[j].num}" class="singlenum"/>
 							</td>
-							<td>${this.price}</td>
+							<td class="singleprice">${this.price}</td>
 							<td>
 								<input type="button" value="删除" class="delete" />
 							</td>
@@ -43,7 +46,9 @@ class Car{
 			}
 		}
 			this.tbody.innerHTML=str;
-			this.sum()
+			this.sum();
+// 			this.zong();
+// 			this.shu()
 	}
 	addEvent(){
 		var that = this;
@@ -75,7 +80,13 @@ class Car{
 				that.changeCookie(function(i){
 					that.goods[i].num = that.num
 				})
-
+				if(that.thead.checked){
+					that.zong(1);
+					that.shu(1);
+				}
+// 				that.zong()
+// 				that.shu()
+				
 				// that.setCookie()
 			}
 		})
@@ -107,7 +118,7 @@ class Car{
 // 		}
 // 	}
 	sum(){
-		console.log(this.thead)
+		// console.log(this.thead)
 		this.bodytr=document.querySelectorAll("#main table tbody tr");
 		// console.log(this.bodytr)
 		var that = this;
@@ -116,12 +127,65 @@ class Car{
 				for(var i=0;i<that.bodytr.length;i++){
 					that.bodytr[i].firstElementChild.firstElementChild.checked=true;
 				}
+				that.zong(1);
+				that.shu(1);
 			}else{
 				for(var i=0;i<that.bodytr.length;i++){
 					that.bodytr[i].firstElementChild.firstElementChild.checked=false;
 				}
+				that.zong(0);
+				that.shu(0);
 			}
 		})
+		
+		for(var i=0;i<this.bodytr.length;i++){
+			// console.log(1)
+			this.bodytr[i].addEventListener("input",function(){
+				
+				that.thead.checked=false
+				that.zong(1)
+				that.shu(1)
+				
+			})
+		}
+		
+	}
+	zong(type){
+		this.bodyprice = document.querySelectorAll("#main table tbody tr .singleprice");
+		// console.log(this.bodyprice)
+		this.addprice=0;
+		for(var i=0;i<this.bodyprice.length;i++){
+			// this.bodyprice[i].innerHTML.substring()
+			if(this.bodytr[i].firstElementChild.firstElementChild.checked==true){
+				this.addprice += this.bodyprice[i].innerHTML.substring(1,this.bodyprice[i].innerHTML.length)-0
+				
+			}
+			// console.log(this.addprice.toFixed(2))
+		}
+		// console.log(this.addprice)
+		if(type==1){
+			this.zongjia.innerHTML = "￥"+this.addprice.toFixed(2);
+			this.heji.innerHTML = "￥"+this.addprice.toFixed(2);
+		}else if(type==0){
+			this.zongjia.innerHTML = "￥"+0;
+			this.heji.innerHTML = "￥"+0;
+		}
+	}
+	shu(type){
+		this.bodynum = document.querySelectorAll("#main table tbody tr .singlenum");
+		this.addnum=0;
+		// console.log(this.bodynum)
+		for(var i=0;i<this.bodynum.length;i++){
+			if(this.bodytr[i].firstElementChild.firstElementChild.checked==true){
+				this.addnum += parseInt(this.bodynum[i].value)	
+			}
+			// console.log(this.addnum)
+		}
+		if(type==1){
+			this.shuliang.innerHTML = this.addnum+"件"	
+		}else if(type==0){
+			this.shuliang.innerHTML = "0件"
+		}
 	}
 }
 new Car
