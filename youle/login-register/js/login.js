@@ -14,7 +14,7 @@ class login{
         }
     }
     getMsg(){
-       console.log(localStorage.getItem("msg"))
+       // console.log(localStorage.getItem("msg"))
        this.msg = localStorage.getItem("msg");
        if(this.msg){
            this.msg = JSON.parse(this.msg)

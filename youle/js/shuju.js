@@ -150,3 +150,25 @@ class Card{
 		}
 	}
 	new Search
+	
+function Reciprocal(){
+	let now = new Date()
+	let prev = new Date("2019/6/18")
+	let differ = prev - now;
+	let d = parseInt(differ/1000/60/60/24)
+
+	 let h = parseInt(differ/1000/60/60%24)
+
+	 let minu = parseInt(differ/1000/60%60)
+
+	 let s = parseInt(differ/1000%60)
+
+	document.querySelectorAll("#main .title h4 p span")[0].innerHTML = d+"天";
+	document.querySelectorAll("#main .title h4 p span")[1].innerHTML = h+"时";
+	document.querySelectorAll("#main .title h4 p span")[2].innerHTML = minu+"分";
+	document.querySelectorAll("#main .title h4 p span")[3].innerHTML = s+"秒";
+	
+}
+setInterval(()=>{
+	Reciprocal()
+},1000)

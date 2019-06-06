@@ -7,6 +7,7 @@
 #top-t .margin .right li i{font:12px/27px "";color:#666;}
 #top-t .margin .right li:after{content:"";display:block;width:1px;height:12px;background:#c5c4c4;position:absolute;top:7px;left:0;}
 #top-t .margin .right li.wel:after{content:"";display:none;}
+#top-t .margin .right li.wel a{color:#0066cc;}
 #top-t .margin .right li.land:after{content:"";display:none;}
 #top-t .margin .right .land{padding:0 12px 0 18px;}
 #top-t .margin .right .land a{color:#0066cc;}

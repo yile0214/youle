@@ -1,3 +1,4 @@
+//放大镜
 class Magnifier{
 	constructor(){
 		this.sBox = document.querySelector("#main .information .left .sBox");
@@ -150,7 +151,7 @@ class Rendering{
 						</ul>
 						<div class="car clear">
 							<input type="btn" class="buy" value="立即购买"/>
-							<input type="btn" class="add" value="加入购物车"/>
+							<a href="car.html"><input type="btn" class="add" value="加入购物车"/></a>
 							<input type="btn" class="collect" value="收藏"/>
 						</div>`
 						this.left.innerHTML=str;
@@ -162,13 +163,40 @@ class Rendering{
 		}
 	}
 	add(){
+		
 		this.addBtn = document.querySelector("#main .information .center .add");
 		this.click()
 	}
 	click(){
 		var that = this
+			this.msg = localStorage.getItem("msg");
 		this.addBtn.onclick=function(){
-			that.setCookie()
+			console.log(that.msg)
+			if(that.msg!=null){
+				that.msg=JSON.parse(that.msg);
+				console.log(that.msg)
+				var onoff=true;
+				for(var i=0;i<that.msg.length;i++){
+					console.log(1)
+					if(that.msg[i].onoff==1){
+						onoff=false
+						that.setCookie();
+						break;
+					}
+				}
+				if(onoff||(!getCookie("thing"))){
+					removeCookie("thing")
+				}
+					
+				
+				
+			}else{
+				if(!getCookie("thing")){
+					removeCookie("thing")
+					
+				}
+				return;
+			}
 		}
 	}
 	// click(){

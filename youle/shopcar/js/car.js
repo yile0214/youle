@@ -21,7 +21,11 @@ class Car{
 		})
 	}
 	getCookie(){
-		this.goods = JSON.parse(getCookie("thing"));
+		if(!getCookie("thing")){
+			return
+		}else{
+			this.goods = JSON.parse(getCookie("thing"));
+		}
 		var str=";"
 		for(var i=0;i<this.res.length;i++){
 			for(var j=0;j<this.goods.length;j++){
@@ -80,14 +84,14 @@ class Car{
 				that.changeCookie(function(i){
 					that.goods[i].num = that.num
 				})
-				if(that.thead.checked){
-					that.zong(1);
-					that.shu(1);
-				}
 // 				that.zong()
 // 				that.shu()
 				
 				// that.setCookie()
+				// if(that.thead.checked){
+					that.zong(1);
+					that.shu(1);
+				// }
 			}
 		})
 	}
