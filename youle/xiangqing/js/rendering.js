@@ -169,12 +169,12 @@ class Rendering{
 	}
 	click(){
 		var that = this
-			this.msg = localStorage.getItem("msg");
+		this.msg = localStorage.getItem("msg");
 		this.addBtn.onclick=function(){
-			console.log(that.msg)
+			// console.log(that.msg)
 			if(that.msg!=null){
 				that.msg=JSON.parse(that.msg);
-				console.log(that.msg)
+				// console.log(that.msg)
 				var onoff=true;
 				for(var i=0;i<that.msg.length;i++){
 					console.log(1)
@@ -184,18 +184,18 @@ class Rendering{
 						break;
 					}
 				}
-				if(onoff||(!getCookie("thing"))){
+				if(onoff){
 					removeCookie("thing")
 				}
 					
 				
 				
 			}else{
-				if(!getCookie("thing")){
+				// if(getCookie("thing")){
 					removeCookie("thing")
 					
-				}
-				return;
+					return;
+				// }
 			}
 		}
 	}
