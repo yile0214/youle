@@ -25,7 +25,7 @@ class Data{
 				if(i<8){
 					str += `<li goodId="${this.res[i].goodId}">
 								<a href="xiangqing/details.html?id=${this.res[i].goodId}">
-									<img data-src="${this.res[i].src}" alt="">
+									<img src="${this.res[i].src}" alt="">
 									<p>${this.res[i].title}</p>
 									<span>${this.res[i].price}</span>
 								</a>
@@ -73,7 +73,7 @@ class Card{
 			if(i<this.res.length){
 				str += `<li>
 						<a href="xiangqing/details.html?id=${this.res[i].goodId}">
-							<img data-src="${this.res[i].src}" alt="">
+							<img src="${this.res[i].src}" alt="">
 							<p>${this.res[i].title}</p>
 							<span>${this.res[i].price}</span>
 						</a>
@@ -151,6 +151,8 @@ class Card{
 	}
 	new Search
 	
+	
+	// 倒计时
 function Reciprocal(){
 	let now = new Date()
 	let prev = new Date("2019/6/18")

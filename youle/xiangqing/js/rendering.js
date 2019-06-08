@@ -150,8 +150,8 @@ class Rendering{
 							</li>
 						</ul>
 						<div class="car clear">
-							<input type="btn" class="buy" value="立即购买"/>
-							<a href="car.html"><input type="btn" class="add" value="加入购物车"/></a>
+							<input type="button" class="buy" value="立即购买"/>
+							<a href="car.html"><input type="button" class="add" value="加入购物车"/></a>
 							<input type="btn" class="collect" value="收藏"/>
 						</div>`
 						this.left.innerHTML=str;

@@ -26,7 +26,7 @@ class Car{
 		}else{
 			this.goods = JSON.parse(getCookie("thing"));
 		}
-		var str=";"
+		var str="";
 		for(var i=0;i<this.res.length;i++){
 			for(var j=0;j<this.goods.length;j++){
 				if(this.goods[j].code==this.res[i].goodId){

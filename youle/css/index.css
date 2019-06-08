@@ -94,6 +94,7 @@ body{background:#f3f4f6;}
 #main .commodity{height:279px;padding-bottom:6px;}
 #main .commodity li{float:left;;border-right:solid 1px #f1f0ec;padding:10px 19px;text-align:center;}
 #main .commodity li a{display:block;}
+#main .commodity li a img{display:block;width:200px;height:200px;}
 #main .commodity li p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:200px;font:12px/22px "";}
 #main .commodity li span{font:16px/36px "";color:#cf2e13;}
 #main .commodity li:nth-child(5){border:none;}
